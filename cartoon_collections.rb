@@ -19,12 +19,12 @@ def long_planeteer_calls(planeteer_calls)
 end
 
 def find_valid_calls(planeteer_calls)
-  result = ""
+  result = nil
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
   planeteer_calls.find do |element|
     valid_calls.each do |call|
       element == call
-      result << element
+      result = element
     end
   end 
   result
