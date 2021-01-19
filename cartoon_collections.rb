@@ -19,9 +19,9 @@ def long_planeteer_calls(planeteer_calls)
 end
 
 def find_valid_calls(planeteer_calls)
-  result = nil
+  result = ""
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
-  planeteer_calls.find do |call|
+  planeteer_calls.find(->{0}) do |call|
     valid_calls.include?(call)
     result = call
   end 
