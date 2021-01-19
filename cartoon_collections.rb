@@ -4,14 +4,15 @@ def square_array(array)
   end
 end
 
-def summon_captain_planet(planeteer_calls)
-  # Use an Enumerable to capitalize and add '!' to every element in the passed in arrays
-  # Return a new array of the results
+def summon_captain_planet(planeteer_calls)\
+  result = []
+  summon_captain_planet.each do |element|
+    result << "#{element.capitalize}!"
+  end
 end
 
 def long_planeteer_calls(planeteer_calls)
-  # Use an Enumerable to check if any string in the passed in array is greater than 4 characters long
-  # Return the boolean result of this check
+  
 end
 
 def find_valid_calls(planeteer_calls)
