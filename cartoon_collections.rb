@@ -4,9 +4,9 @@ def square_array(array)
   end
 end
 
-def summon_captain_planet(planeteer_calls)\
+def summon_captain_planet(planeteer_calls)
   result = []
-  summon_captain_planet.each do |element|
+  planeteer_calls.each do |element|
     result << "#{element.capitalize}!"
   end
   result
@@ -19,8 +19,13 @@ def long_planeteer_calls(planeteer_calls)
 end
 
 def find_valid_calls(planeteer_calls)
+  result = ""
   valid_calls = ["Earth!", "Wind!", "Fire!", "Water!", "Heart!"]
   planeteer_calls.find do |element|
-    element == valid_calls 
+    valid_calls.each do |call|
+      element == call
+      result << element
+    end
   end 
+  result
 end
